@@ -106,8 +106,8 @@ impl Instance {
                 let mut flags = hal::InstanceFlags::empty();
                 if cfg!(debug_assertions) {
                     flags |= hal::InstanceFlags::VALIDATION;
-                    flags |= hal::InstanceFlags::DEBUG;
                 }
+                flags |= hal::InstanceFlags::DEBUG;
                 let hal_desc = hal::InstanceDescriptor {
                     name: "wgpu",
                     flags,
